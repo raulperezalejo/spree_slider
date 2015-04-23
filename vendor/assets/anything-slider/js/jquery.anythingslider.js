@@ -706,7 +706,7 @@
 
 		appendForwardTo     : null,      // Append forward arrow to a HTML element (jQuery Object, selector or HTMLNode), if not null
 		appendBackTo        : null,      // Append back arrow to a HTML element (jQuery Object, selector or HTMLNode), if not null
-		appendControlsTo    : null,      // Append controls (navigation + start-stop) to a HTML element (jQuery Object, selector or HTMLNode), if not null
+		appendControlsTo    : false,      // Append controls (navigation + start-stop) to a HTML element (jQuery Object, selector or HTMLNode), if not null
 		appendNavigationTo  : null,      // Append navigation buttons to a HTML element (jQuery Object, selector or HTMLNode), if not null
 		appendStartStopTo   : null,      // Append start-stop button to a HTML element (jQuery Object, selector or HTMLNode), if not null
 
@@ -734,7 +734,7 @@
 		navigationSize      : false,     // Set this to the maximum number of visible navigation tabs; false to disable
 
 		// Slideshow options
-		autoPlay            : false,     // If true, the slideshow will start running; replaces "startStopped" option
+		autoPlay            : true,     // If true, the slideshow will start running; replaces "startStopped" option
 		autoPlayLocked      : false,     // If true, user changing slides will not stop the slideshow
 		autoPlayDelayed     : false,     // If true, starting a slideshow will delay advancing slides; if false, the slider will immediately advance to the next slide when slideshow starts
 		pauseOnHover        : true,      // If true & the slideshow is active, the slideshow will pause on hover
