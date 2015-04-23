@@ -1,7 +1,8 @@
 class Spree::Slide < ActiveRecord::Base
 
-  has_attached_file :image
-  validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
+  has_attached_file :attachment,
+                    :convert_options => { :all => '-strip -auto-orient' }
+  validates_attachment :attachment, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
   scope :published, -> { where(published: true).order('position ASC') }
 
   belongs_to :product, touch: true

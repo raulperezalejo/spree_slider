@@ -6,6 +6,10 @@ module SpreeSlider
 
     config.autoload_paths += %W(#{config.root}/lib)
 
+    initializer "spree_slide.preferences", :before => :load_config_initializers do |app|
+      SpreeSlider::Config = Spree::SlideConfiguration.new
+    end
+
     # use rspec for tests
     config.generators do |g|
       g.test_framework :rspec
