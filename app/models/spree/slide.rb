@@ -21,6 +21,6 @@ class Spree::Slide < ActiveRecord::Base
   end
 
   def slide_image
-    !image.file? && product.present? && product.images.any? ? product.images.first.attachment : image
+    !attachment.file? && product.present? && product.images.any? ? product.images.first.attachment : attachment
   end
 end

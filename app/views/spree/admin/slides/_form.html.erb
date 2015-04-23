@@ -44,16 +44,16 @@
   </div>
 
   <div class="alpha six columns">
-    <%= f.field_container :image do %>
-      <%= f.label :image, t(:image) %> <i>(<%= t('spree_slider.image_tip') %>)</i><br />
-      <%= f.file_field :image %>
+    <%= f.field_container :attachment do %>
+      <%= f.label :attachment, t(:attachment) %> <i>(<%= t('spree_slider.image_tip') %>)</i><br />
+      <%= f.file_field :attachment %>
     <% end %>
   </div>
 
   <div class="omega six columns">
-    <%= f.field_container :image do %>
-      <% if f.object.image? %>
-        <p><%= image_tag f.object.image, style: 'max-width: 100%; height: auto;' %></p>
+    <%= f.field_container :attachment do %>
+      <% if f.object.attachment? %>
+        <p><%= image_tag f.object.attachment, style: 'max-width: 100%; height: auto;' %></p>
       <% end %>
     <% end %>
   </div>
