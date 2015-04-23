@@ -4,6 +4,8 @@ class Spree::Slide < ActiveRecord::Base
                     :convert_options => { :all => '-strip -auto-orient' }
   validates_attachment :attachment, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
   scope :published, -> { where(published: true).order('position ASC') }
+  scope :horizontal, -> { where(horizontal: true).order('position ASC') }
+  scope :vertical, -> { where(vertical: true).order('position ASC') }
 
   belongs_to :product, touch: true
 
